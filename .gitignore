@@ -1,0 +1,8 @@
+_debug*
+*.sif
+**/__pycache__/
+__pycache__/
+config.yaml
+__debug**
+data/**
+data.zip
