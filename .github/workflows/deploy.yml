@@ -1,4 +1,4 @@
-name: Deploy Astro to GitHub Pages (Org Site)
+name: Deploy Astro from CodeTransEngine to codetransengine.github.io
 
 on:
   push:
@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout source
+      - name: Checkout source repo (CodeTransEngine)
         uses: actions/checkout@v4
 
       - name: Setup Node
@@ -19,19 +19,22 @@ jobs:
           node-version: 20
 
       - name: Install dependencies
-        run: npm install
+        working-directory: docs
+        run: npm ci
 
       - name: Build Astro site
+        working-directory: docs
         run: npm run build
 
       - name: Add .nojekyll
-        run: touch dist/.nojekyll
+        run: touch docs/dist/.nojekyll
 
-      - name: Deploy to main branch
+      - name: Deploy to codetransengine.github.io
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.DEPLOY_TOKEN }}
+          external_repository: CodeTransEngine/codetransengine.github.io
           publish_branch: main
-          publish_dir: dist
+          publish_dir: docs/dist
           destination_dir: .
           force_orphan: true
