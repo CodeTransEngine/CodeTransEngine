@@ -7,7 +7,6 @@ import tailwind from '@astrojs/tailwind';
 // https://astro.build/config
 export default defineConfig({
     site: 'https://codetransengine.github.io',
-    base: '/',
     output: 'static',
     integrations: [starlight({
         title: '🛤️ CodeTransEngine',
