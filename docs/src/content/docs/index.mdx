@@ -1,0 +1,44 @@
+---
+title: Homepage
+description: CodeTransEngine, the unified backend for code translation
+template: splash
+hero:
+  title: LLM-Powered Code Translation Made Easy
+  tagline: Translate code across programming languages, modernize legacy systems, benchmark LLM performance, build agentic systems, and accelerate research. CodeTransEngine is an open-source and ready-to-use backend, designed to support your next project—whether you're building tools, running experiments, or shipping production systems.
+  actions:
+    - text: Getting Started
+      link: https://github.com/CodeTransEngine/CodeTransEngine
+      icon: right-arrow
+    - text: Read the docs
+      link: /guides/
+      icon: external
+      variant: minimal
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+## Next steps
+
+<CardGrid stagger>
+  <Card title="Choose Your Algorithm" icon="layers">
+    Support for multiple translation strategies like InterTrans, Direct Translation, and Few-shot Prompting—tailor it to your needs.
+  </Card>
+  <Card title="Run Fast, Scale Wide" icon="zap">
+    Efficient, distributed inference with vLLM backend and OpenAI-compatible APIs for seamless performance.
+  </Card>
+  <Card title="Secure Code Execution" icon="shield">
+    Secure, containerized code execution ensures safe handling of translated code.
+  </Card>
+  <Card title="Know It Works" icon="bar-chart">
+    Built-in test-case based evaluation gives instant feedback on translation quality.
+  </Card>
+  <Card title="Make It Your Own" icon="wrench">
+    Fully extensible to new datasets, custom prompts, and novel translation algorithms.
+  </Card>
+  <Card title="Save Resources Smartly" icon="refresh-cw">
+    Configurable caching and flexible concurrency options let you balance speed and resource usage.
+  </Card>
+  <Card title="Fit into Any Workflow" icon="plug">
+    Use it as a standalone tool or seamlessly integrate into your existing code translation pipelines.
+  </Card>
+</CardGrid>
