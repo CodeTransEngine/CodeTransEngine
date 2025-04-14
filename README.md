@@ -27,6 +27,14 @@ CodeTransEngine serves as a **backend** for code translation, helping you save t
 
 Please see the [Documentation Page](https://codetransengine.github.io/guides/)
 
+## Architecture
+![alt text](docs/github/arch.png)
+
+CodeTransEngine is designed to support a variety of user cases, ensuring seamless integration into a wide range of code translation workflows. This adaptability allows it to function both as a standalone tool and as a modular component within larger pipelines for automated code translation. For instance, it can serve as the backend for whole-repository translation initiatives, where tasks
+such as file listing, planning, and program slicing can be executed outside of the engine, or it can be
+used standalone to translate source code
+
+
 ## Citation
 If you use this tool for academic purposes, please considering citing our system paper:
 
